@@ -11,132 +11,44 @@
             background-color: #000;
             color: #fff;
             display: flex;
-            flex-direction: column;
-            justify-content: space-between;
-            align-items: center;
+            justify-content: center;
+            align-items: flex-start;
             height: 100vh;
             overflow: hidden;
+            text-align: center;
         }
         .container {
-            display: flex;
             width: 100%;
-            height: calc(100% - 80px); /* Leaves room for bottom section */
-        }
-        .frame {
-            flex: 1;
             padding: 20px;
             box-sizing: border-box;
+        }
+        .top-center-text {
+            font-size: 2em; /* Increase the font size */
+            margin: 0; /* Remove default margin */
+            padding: 10px 0; /* Add some padding */
+            font-weight: bold; /* Make the text bold */
+        }
+        .frame {
             display: flex;
             justify-content: center;
             align-items: center;
-        }
-        .left-frame {
-            text-align: center;
-            font-size: 1.5em;
-        }
-        .right-frame iframe, .right-frame .coming-soon {
+            flex-direction: column;
             width: 100%;
-            height: 100%;
-        }
-        .coming-soon {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            font-size: 1.5em;
-            color: #aaa;
-        }
-        .bottom-section {
-            width: 100%;
-            padding: 10px;
-            text-align: center;
-            background-color: #111;
+            padding: 20px;
             box-sizing: border-box;
-        }
-        .bottom-section input[type="email"] {
-            padding: 10px;
-            margin: 5px;
-            border: none;
-            border-radius: 5px;
-            width: 200px;
-        }
-        .bottom-section button {
-            padding: 10px 20px;
-            background-color: #333;
-            color: #fff;
-            border: none;
-            border-radius: 5px;
-            cursor: pointer;
         }
     </style>
 </head>
 <body>
     <div class="container">
-         <p>Prayer Coffee ☕✨ Welcome to Prayer Coffee, a unique project</p>
+        <!-- Centered Heading Text -->
+        <p class="top-center-text">Prayer Coffee ☕✨ Welcome to Prayer Coffee, a unique project</p>
+        
         <!-- Left Frame for Google Sheets Text -->
         <div class="frame left-frame" id="text-frame">
             <!-- Text will be loaded here via JavaScript -->
-            <p>Prayer Coffee ☕✨ Welcome to Prayer Coffee, a unique project that combines faith, community, and the comforting ritual of coffee. This project aims to provide a peaceful space online, where each visit to PrayerCoffee.net inspires a moment of reflection, connection, and spirituality. Prayer Coffee is more than just a coffee brand – it’s a mission to bring people together over shared values, gratitude, and prayer.</p>
-        </div>
-        
-        <!-- Right Frame for YouTube Video Placeholder -->
-        <div class="frame right-frame">
-            <div class="coming-soon">YouTube Video Coming Soon</div>
-            <!-- Uncomment the line below and replace 'VIDEO_ID' with your YouTube video ID when ready -->
-            <!-- <iframe src="https://www.youtube.com/embed/VIDEO_ID" frameborder="0" allowfullscreen></iframe> -->
+            <p>Here is some dynamic content from Google Sheets...</p>
         </div>
     </div>
-
-    <!-- Bottom Section for Email Subscription -->
-    <div class="bottom-section">
-        <p>Stay connected with Prayer Coffee for upcoming releases, exclusive promotions, and our prayer projects.</p>
-        <input type="email" id="email" placeholder="Enter your email">
-        <button onclick="subscribe()">Subscribe Now</button>
-    </div>
-
-    <script>
-        // Fetching Google Sheets Text
-        async function fetchTextFromGoogleSheet() {
-            try {
-                const response = await fetch('https://script.google.com/macros/s/AKfycbzaXo-zEKnoa3Pw03HEoDjQ11S6gWi7SSNxfYmW0MHiAH0iFo13u7QQmPSGtRyUh61-Yw/exec');
-                const data = await response.json();
-                document.getElementById('text-frame').textContent = data.text;
-            } catch (error) {
-                console.error('Error fetching text:', error);
-                document.getElementById('text-frame').textContent = 'Error loading text.';
-            }
-        }
-
-        // Call function to load text on page load
-        fetchTextFromGoogleSheet();
-
-        // Subscribing Email to Google Sheets
-        async function subscribe() {
-            const email = document.getElementById('email').value;
-            if (!email) {
-                alert("Please enter a valid email.");
-                return;
-            }
-
-            try {
-                const response = await fetch('YOUR_GOOGLE_APPS_SCRIPT_URL', {
-                    method: 'POST',
-                    body: JSON.stringify({ email }),
-                    headers: {
-                        'Content-Type': 'application/json'
-                    }
-                });
-                const result = await response.json();
-                if (result.success) {
-                    alert("Thank you for subscribing!");
-                    document.getElementById('email').value = '';
-                } else {
-                    alert("Subscription failed. Please try again later.");
-                }
-            } catch (error) {
-                console.error('Subscription error:', error);
-                alert("Error processing subscription.");
-            }
-        }
-    </script>
 </body>
 </html>
