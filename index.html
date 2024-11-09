@@ -5,17 +5,20 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Prayer Coffee</title>
     <style>
+        /* Import an Egyptian-styled font */
+        @import url('https://fonts.googleapis.com/css2?family=Noto+Serif+Egyptian:wght@700&display=swap');
+        
         body {
             margin: 0;
             font-family: Arial, sans-serif;
-            color: #fff;
+            color: #000;
             display: flex;
             justify-content: center;
             align-items: flex-start;
             height: 100vh;
             overflow: hidden;
             text-align: center;
-            background-image: url('./backgroundstainglass.png');
+            background-image: url('https://raw.githubusercontent.com/lucianojohnpucci/prayercoffee/main/backgroundstainglass.png');
             background-size: cover;
             background-position: center;
             background-repeat: no-repeat;
@@ -27,14 +30,16 @@
             display: flex;
             flex-direction: column;
             align-items: center;
-            background-color: rgba(0, 0, 0, 0.5); /* Dark overlay for better text readability */
+            background-color: rgba(255, 255, 255, 0.7); /* Light overlay for readability */
         }
         .top-center-text {
             font-size: 2em;
             margin: 0;
             padding: 10px 20px;
             font-weight: bold;
-            border: 3px double #fff;
+            font-family: 'Noto Serif Egyptian', 'Papyrus', serif; /* Egyptian-inspired font */
+            color: #000; /* Black text */
+            border: 3px double #000; /* Black double border for emphasis */
             display: inline-block;
             max-width: 90%;
             box-sizing: border-box;
@@ -48,7 +53,7 @@
             padding: 20px;
             margin-top: 20px;
             box-sizing: border-box;
-            border: 3px double #fff;
+            border: 3px double #000;
         }
 
         /* Responsive adjustments for smaller screens */
@@ -77,8 +82,8 @@
 </head>
 <body>
     <div class="container">
-        <!-- Centered Heading Text with Double Border -->
-        <p class="top-center-text">☕ Prayer Coffee ✨ Welcome to Prayer Coffee, a unique project</p>
+        <!-- Centered Heading Text with Egyptian-Styled Font and Black Text -->
+        <p class="top-center-text">☕☕ Prayer Coffee ☕☕ Welcome to Prayer Coffee, a unique project</p>
         
         <!-- Left Frame for Google Sheets Text with Double Border -->
         <div class="frame left-frame" id="text-frame">
