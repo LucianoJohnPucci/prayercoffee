@@ -8,53 +8,28 @@
         /* Import an Egyptian-styled font */
         @import url('https://fonts.googleapis.com/css2?family=Noto+Serif+Egyptian:wght@700&display=swap');
         
+        /* Background styling */
         body {
             margin: 0;
             font-family: Arial, sans-serif;
-            color: #000;
             display: flex;
             justify-content: center;
-            align-items: flex-start;
+            align-items: center;
             height: 100vh;
             overflow: hidden;
-            text-align: center;
             background-image: url('https://raw.githubusercontent.com/LucianoJohnPucci/prayercoffee/refs/heads/main/BackgroundStainglass.png');
             background-size: cover;
             background-position: center;
             background-repeat: no-repeat;
+            color: #DBE9FA; /* Light blue text color */
         }
+        
+        /* Centered container */
         .container {
-            width: 100%;
+            text-align: center;
+            background-color: rgba(0, 0, 0, 0.4); /* Semi-transparent overlay */
             padding: 20px;
-            box-sizing: border-box;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            background-color: rgba(255, 255, 255, 0.4); /* Light overlay for readability */
-            in-height: 100vh;
-        }
-        .top-center-text {
-            font-size: 2em;
-            margin: 0;
-            padding: 10px 20px;
-            font-weight: bold;
-            font-family: 'Noto Serif Egyptian', 'Papyrus', serif; /* Egyptian-inspired font */
-            color: #000; /* Black text */
-            border: 3px double #000; /* Black double border for emphasis */
-            display: inline-block;
-            max-width: 90%;
-            box-sizing: border-box;
-        }
-        .frame {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            flex-direction: column;
-            width: 80%;
-            padding: 20px;
-            margin-top: 20px;
-            box-sizing: border-box;
-            border: 3px double #000;
+            border-radius: 8px;
         }
 
         /* Responsive adjustments for smaller screens */
@@ -85,7 +60,7 @@
     <div class="container">
         <!-- Centered Heading Text with Egyptian-Styled Font and Black Text -->
         <p class="top-center-text">☕ Prayer Coffee ☕</p>
-        <p class="top-center-text">Welcome to our Upcoming Unique Project✨</p>
+        <p class="top-center-text">✨Welcome to our Upcoming Unique Project✨</p>
       
         <!-- Left Frame for Google Sheets Text with Double Border -->
         <div class="frame left-frame" id="text-frame">
