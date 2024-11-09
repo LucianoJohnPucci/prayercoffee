@@ -21,6 +21,9 @@
             width: 100%;
             padding: 20px;
             box-sizing: border-box;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
         }
         .top-center-text {
             font-size: 2em;
@@ -29,17 +32,42 @@
             font-weight: bold;
             border: 3px double #fff; /* Double white border */
             display: inline-block;
+            max-width: 90%;
+            box-sizing: border-box;
         }
         .frame {
             display: flex;
             justify-content: center;
             align-items: center;
             flex-direction: column;
-            width: 80%; /* Adjust width to control frame size */
+            width: 80%; /* Default width for larger screens */
             padding: 20px;
             margin-top: 20px;
             box-sizing: border-box;
             border: 3px double #fff; /* Double white border */
+        }
+
+        /* Responsive adjustments for smaller screens */
+        @media (max-width: 768px) {
+            .top-center-text {
+                font-size: 1.5em; /* Slightly smaller font for mobile */
+                padding: 8px 16px; /* Adjust padding */
+            }
+            .frame {
+                width: 90%; /* Increase width to fit better on smaller screens */
+                padding: 15px; /* Reduce padding */
+            }
+        }
+
+        @media (max-width: 480px) {
+            .top-center-text {
+                font-size: 1.2em; /* Smaller font size for very small screens */
+                padding: 6px 12px;
+            }
+            .frame {
+                width: 95%; /* Full width for small screens */
+                padding: 10px;
+            }
         }
     </style>
 </head>
@@ -56,4 +84,3 @@
     </div>
 </body>
 </html>
-
