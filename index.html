@@ -46,7 +46,24 @@
             box-sizing: border-box;
             border: 3px double #fff; /* Double white border */
         }
-
+        /* Button styling */
+        .bottom-button {
+            position: fixed;
+            bottom: 20px;
+            background-color: #fff;
+            color: #000;
+            padding: 10px 20px;
+            border: 2px solid #fff;
+            border-radius: 5px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: background-color 0.3s, color 0.3s;
+        }
+        .bottom-button:hover {
+            background-color: #444;
+            color: #fff;
+        }
+        
         /* Responsive adjustments for smaller screens */
         @media (max-width: 768px) {
             .top-center-text {
@@ -74,7 +91,7 @@
 <body>
     <div class="container">
         <!-- Centered Heading Text with Double Border -->
-        <p class="top-center-text">Prayer Coffee ☕✨ Welcome to Prayer Coffee, a unique project</p>
+        <p class="top-center-text">Prayer Coffee ☕✨ Welcome to Prayer Coffee, a unique project Coming Soon!!</p>
         
         <!-- Left Frame for Google Sheets Text with Double Border -->
         <div class="frame left-frame" id="text-frame">
@@ -82,5 +99,9 @@
             <p>Here is some dynamic content from Google Sheets...</p>
         </div>
     </div>
+
+    <!-- Button at the Bottom Center -->
+    <a href="https://google.com" target="_blank" class="bottom-button">Learn More</a>
+
 </body>
 </html>
