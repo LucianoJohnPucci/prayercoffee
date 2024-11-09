@@ -23,28 +23,32 @@
             box-sizing: border-box;
         }
         .top-center-text {
-            font-size: 2em; /* Increase the font size */
-            margin: 0; /* Remove default margin */
-            padding: 10px 0; /* Add some padding */
-            font-weight: bold; /* Make the text bold */
+            font-size: 2em;
+            margin: 0;
+            padding: 10px 20px;
+            font-weight: bold;
+            border: 3px double #fff; /* Double white border */
+            display: inline-block;
         }
         .frame {
             display: flex;
             justify-content: center;
             align-items: center;
             flex-direction: column;
-            width: 100%;
+            width: 80%; /* Adjust width to control frame size */
             padding: 20px;
+            margin-top: 20px;
             box-sizing: border-box;
+            border: 3px double #fff; /* Double white border */
         }
     </style>
 </head>
 <body>
     <div class="container">
-        <!-- Centered Heading Text -->
+        <!-- Centered Heading Text with Double Border -->
         <p class="top-center-text">Prayer Coffee ☕✨ Welcome to Prayer Coffee, a unique project</p>
         
-        <!-- Left Frame for Google Sheets Text -->
+        <!-- Left Frame for Google Sheets Text with Double Border -->
         <div class="frame left-frame" id="text-frame">
             <!-- Text will be loaded here via JavaScript -->
             <p>Here is some dynamic content from Google Sheets...</p>
@@ -52,3 +56,4 @@
     </div>
 </body>
 </html>
+
