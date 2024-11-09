@@ -8,6 +8,7 @@
         /* Import an Egyptian-styled font */
         @import url('https://fonts.googleapis.com/css2?family=Noto+Serif+Egyptian:wght@700&display=swap');
         
+        /* Full-page background with responsive image */
         body {
             margin: 0;
             font-family: Arial, sans-serif;
@@ -15,7 +16,7 @@
             display: flex;
             justify-content: center;
             align-items: flex-start;
-            height: 100vh;
+            min-height: 100vh;
             overflow: hidden;
             text-align: center;
             background-image: url('https://raw.githubusercontent.com/LucianoJohnPucci/prayercoffee/refs/heads/main/BackgroundStainglass.png');
@@ -23,6 +24,8 @@
             background-position: center;
             background-repeat: no-repeat;
         }
+        
+        /* Container with semi-transparent background */
         .container {
             width: 100%;
             padding: 20px;
@@ -31,7 +34,10 @@
             flex-direction: column;
             align-items: center;
             background-color: rgba(255, 255, 255, 0.7); /* Light overlay for readability */
+            min-height: 100vh; /* Ensures the container stretches the full viewport height */
         }
+        
+        /* Egyptian-styled font with bold black text */
         .top-center-text {
             font-size: 2em;
             margin: 0;
@@ -44,6 +50,8 @@
             max-width: 90%;
             box-sizing: border-box;
         }
+        
+        /* Framed section with double border */
         .frame {
             display: flex;
             justify-content: center;
@@ -83,7 +91,7 @@
 <body>
     <div class="container">
         <!-- Centered Heading Text with Egyptian-Styled Font and Black Text -->
-        <p class="top-center-text">☕☕ Prayer Coffee ☕☕ Welcome to Prayer Coffee, a unique project</p>
+        <p class="top-center-text">☕ Prayer Coffee ☕ Welcome to Prayer Coffee, Upcoming unique project</p>
         
         <!-- Left Frame for Google Sheets Text with Double Border -->
         <div class="frame left-frame" id="text-frame">
